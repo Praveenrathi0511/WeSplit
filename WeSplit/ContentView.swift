@@ -25,11 +25,7 @@ struct ContentView: View {
         let amountPerPerson = totalAmount/peopleCount
         return amountPerPerson
     }
-//    @State private var tapCount:Int = 0
-//    let students = ["Harry","Hermoine","Ron","Draco"]
-//    @State private var selectedStudent = "Ron"
-    
-    
+      
     var body: some View {
         
         NavigationStack{
@@ -44,16 +40,8 @@ struct ContentView: View {
                             Text("\($0) people")
                         }
                     }
-//                    .pickerStyle(.navigationLink)
                 }
                 Section("How much you want to tip?"){
-//                    Picker("Tip Percentage",selection: $tipPercentage){
-//                        ForEach(tipPercentages,id:\.self){
-//                            Text($0,format:.percent)
-//                        }
-//                    }
-//                    .pickerStyle(.segmented)
-                    
                     Picker("Tip Percentage",selection: $tipPercentage){
                         ForEach(0..<101,id:\.self){
                             Text($0,format:.percent)
@@ -77,40 +65,6 @@ struct ContentView: View {
                 }
             }
         }
-        
-        
-        
-//        Form{
-//            Picker("Select Your Student", selection: $selectedStudent) {
-//                ForEach(students, id: \.self) {
-//                    Text($0)
-//                }
-//            }
-//            Text(selectedStudent)
-//        }
-//        Button(action: {
-//            tapCount+=1
-//        }, label: {
-//            Text("Count: \(tapCount)")
-//                .font(.title2)
-//        })
-        
-//        NavigationStack{
-//            Form{
-//                Section{
-//                    Text("Hello")
-//                    Text("Hello")
-//                }
-//                Section{
-//                    Text("Hello")
-//                    Text("Hello")
-//                    Text("Hello")
-//                    Text("Hello")
-//                }
-//            }
-//            .navigationTitle("SwiftUI")
-//            .navigationBarTitleDisplayMode(.automatic)
-//        }
     }
 }
 
